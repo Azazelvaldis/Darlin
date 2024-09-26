@@ -257,6 +257,33 @@ body {
     }
 }
 
+/* Close Button */
+.close-btn {
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none; /* Hide by default */
+}
+
+/* Show close button in mobile view when menu is active */
+.nav.active .close-btn {
+    display: block;
+}
+
+/* Adjust Hamburger Menu styles */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: white;
+}
+
 /* Responsive: Show Hamburger and Hide Menu */
 @media (max-width: 768px) {
     .nav ul {
