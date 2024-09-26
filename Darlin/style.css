@@ -1,0 +1,290 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #001f3f; /* Midnight Blue */
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #001f3f;
+    color: white;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2em;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.nav a i {
+    margin-right: 8px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('img/cover2.gif'); /* Use a space-themed image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #001f3f;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9900;
+}
+
+/* About Section */
+.about {
+    padding: 4em 0;
+    background-color: #001a33;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.about-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Projects Section */
+.projects {
+    padding: 3em 0;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: #0a2c54;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #cccccc;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Skills Section */
+.skills {
+    background-color: #001a33;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4em 0;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ffcc00;
+    color: #001f3f;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ff9900;
+}
+
+/* Footer */
+.footer {
+    padding: 1em 0;
+    background-color: #001a33;
+    color: white;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive: Show Hamburger and Hide Menu */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #001f3f;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .nav.active ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav ul li {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .nav a {
+        font-size: 1.2em;
+    }
+}
+
