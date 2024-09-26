@@ -11,9 +11,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Toggle hamburger menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
+const closeBtn = document.getElementById('close-btn');
 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    nav.classList.remove('active');
 });
 
 // Fade in effect for the hero section on load
